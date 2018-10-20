@@ -31,18 +31,21 @@ function charCount(str) {
     let result = {};
     // loop over string, for each character..
     for (let i = 0; i < str.length; i++){
-        let char = str[i].toLowerCase()
-        if (result[char]> 0){
-    // if the char is a number/letter AND key in object, add one to count
-            result[char]++;
-        }else{
-            // if the char is a number/letter AND not in object, add it to object  and set value to 1
-            result[char] = 1
-        };
+        let char = str[i].toLowerCase();
+        if (/[a-z0-9]/.test(char)) {
+            if (result[char]> 0){
+        // if the char is a number/letter AND key in object, add one to count
+                result[char]++;
+            }else{
+                // if the char is a number/letter AND not in object, add it to object  and set value to 1
+                result[char] = 1
+            };
+
+        }
     }
     // return object at end
     return result
         // if character is something else (space, period, etc.) don't do anything
 
 } 
-console.log(charCount("Renee"))
+console.log(charCount("Renee and Vance Sitting in a Tree Kissing"))
