@@ -17,3 +17,6 @@ Break down the problem
 Solve/Simplify the problem
 
 
+Frequency Counters
+Pattern uses objects or sets to collect values/frequencies of values
+This can avoid the need for nested loops or O(N^2) operations with arrays/strings
