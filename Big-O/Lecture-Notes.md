@@ -17,6 +17,22 @@ Break down the problem
 Solve/Simplify the problem
 
 
+
+
+Problem Solving Problems
 Frequency Counters
 Pattern uses objects or sets to collect values/frequencies of values
 This can avoid the need for nested loops or O(N^2) operations with arrays/strings
+
+
+
+Anagrams 
+given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name formed by rearranging the letters of another, such cinema, formed from iceman.
+
+Multiple Pointers Pattern
+Creating Pointer or values that correspond to an index or position and move towards the beginning, end or middle based on a certain condition
+Very efficient for solving problems with minimal space complexity as well
+
+
+count unique values
+Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. THere can be negative numbers in the array, but it will always be sorted
