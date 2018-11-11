@@ -23,6 +23,7 @@
 
 
 // Sliding window approach
+// Sliding window approach could potentially be used for calculating the TTM financial reports, or some statistical approach
 function maxSubarraySum(arr, num) {
     let maxSum = 0;
     let tempSum = 0;
