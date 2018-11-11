@@ -36,3 +36,9 @@ Very efficient for solving problems with minimal space complexity as well
 
 count unique values
 Implement a function called countUniqueValues, which accepts a sorted array, and counts the unique values in the array. THere can be negative numbers in the array, but it will always be sorted
+
+
+Sliding Window
+This pattern involves creating a window which can either be an array or number from one position to another depending on a certain condition, the window either increases or closes (and a new window is created)
+Very useful for keeping track of a subset of data in an array/string etc.
+
