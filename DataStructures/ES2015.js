@@ -27,6 +27,11 @@ class Student {
         this.scores.reduce(function(a,b) {return a+b;})
         return sum/this.scores.length;
     }
+
+    // class method
+    static EnrollStudents() {
+        return "Enrolling students";
+    }
 }
 
 // creating objects from classes
