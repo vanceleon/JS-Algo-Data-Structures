@@ -19,3 +19,8 @@ binary Heap
 
 What is a class?
 blueprint
+
+
+Class Methods
+Used like a utility function
+not related to the particular instance of the class
