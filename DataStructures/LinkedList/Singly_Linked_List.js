@@ -8,55 +8,63 @@ class Node {
   }
 }
 
-class SinglyLinkedList{
-    constructor(){
-        this.head = null;
-        this.tail = null;
-        this.length = 0;
+class SinglyLinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
+  }
+  push(val) {
+    let newNode = new Node(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
     }
-    push(val){
-        let newNode = new Node(val);
-        if (!this.head) {
-            this.head = newNode;
-            this.tail = newNode;
-
-        } else {
-            this.tail.next = newNode;
-            this.tail = newNode;
-        }
-        this.length++;
-        return this
+    this.length++;
+    return this;
+  }
+  pop() {
+    if (!this.head) return undefined;
+    let current = this.head;
+    let newTail = current;
+    while (current.next) {
+      newTail = current; //second to last node
+      current = current.next; //Last node
     }
-    pop() {
-        if (!this.head) return undefined;
-        let current = this.head;
-        let newTail = current;
-        while(current.next) {
-            newTail = current;//second to last node
-            current = current.next; //Last node
-        }
-        this.tail = newTail;
-        this.tail.next = null; //destroyes -> to the next node
-        this.length--;
-        if(this.length === 0){
-            this.head = null;
-            this.tail = null;
-        }
-        return current;    
+    this.tail = newTail;
+    this.tail.next = null; //destroyes -> to the next node
+    this.length--;
+    if (this.length === 0) {
+      this.head = null;
+      this.tail = null;
     }
-    shift(){
-        if(!this.head) return undefined;
-        let currentHead = this.head;
-        this.head = currentHead.next;
-        this.length--;
-        if(this.length === 0){
-            this.tail = null;
-        }
-        return currentHead;
-
+    return current;
+  }
+  shift() {
+    if (!this.head) return undefined;
+    let currentHead = this.head;
+    this.head = currentHead.next;
+    this.length--;
+    if (this.length === 0) {
+      this.tail = null;
     }
+    return currentHead;
+  }
+  unshift(val) {
+    let newNode = new Node(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
     }
-
+    this.length++;
+    return this;
+  }
 }
 
 // var first = new Node("Hi");
@@ -65,6 +73,7 @@ class SinglyLinkedList{
 // first.next.next.next = new Node("are");
 // first.next.next.next.next = new Node("you");
 
-let list = new SinglyLinkedList()
-// list.push("HELLO");
-// list.push("Goodbye");
+let list = new SinglyLinkedList();
+list.push("HELLO");
+list.push("Goodbye");
+list.push("!");

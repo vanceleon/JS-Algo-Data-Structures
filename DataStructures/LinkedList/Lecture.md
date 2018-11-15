@@ -46,3 +46,15 @@ pseudocode
 - set the head property to be the current head's next property
 - decrement the length by 1
 - Return the value of the node removed
+
+
+Unshifting
+- adding a new node to the beginning of the Linked List
+pseudocode
+- accept a value
+- create new node using val passed to the function 
+- if no head set the head and tail to newly created node
+- set the newly created node's property to be the current head property on the list
+- set the head property on the list to be that newly created node
+- increment the length of the list 
+- return list
