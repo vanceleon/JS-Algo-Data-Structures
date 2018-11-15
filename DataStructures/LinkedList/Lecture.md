@@ -32,3 +32,17 @@ pseudocode
 - if there are no nodes in the list, return undefined
 - loop through the list until you reach the tail
 - set the next property of the 2nd to last node to be null
+- set the tail to be the 2nd to last node 
+- decrement the length of the list by 1
+- return the value of the node removed
+
+
+Shifting 
+- removing a new node from the beginning of the Linked List
+
+pseudocode
+- if there are no nodes, return undefined
+- store the current head property in a variable
+- set the head property to be the current head's next property
+- decrement the length by 1
+- Return the value of the node removed
