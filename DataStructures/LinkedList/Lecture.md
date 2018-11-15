@@ -27,3 +27,8 @@ pushing pseudocode
 Popping
 - removing a node from the end of the Linked List!
 - need to be able to tranverse list
+
+pseudocode 
+- if there are no nodes in the list, return undefined
+- loop through the list until you reach the tail
+- set the next property of the 2nd to last node to be null
