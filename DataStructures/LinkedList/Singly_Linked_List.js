@@ -94,13 +94,8 @@ class SinglyLinkedList {
     let prevNode = 0;
     
     if(index < 0 || index > this.length) return false;
-    if(index === this.length) {
-      return this.push(val);
-      // return true;
-    }if (index === 0) {
-      return this.unshift(val);
-      // return true;
-    }
+    if(index === this.length) return !!this.push(val)
+    if (index === 0) return !!this.unshift(val);
     const newNode = new Node(val);
     const prevNode = this.get(index - 1);
     const temp = prevNode.next;
