@@ -104,3 +104,18 @@ PS code
 - set the next property on that node to be the next of the next node 
 - decrement the length
 - return the value of the node removed
+
+
+Reverse 
+- reversing the order of the list 
+
+PSCode 
+- swap the head and the tail 
+- create a variable called next
+- create variable prev
+- create var node and initialize it to the head property
+- Loop through the list
+- set next to be the next property on whatever prev is
+- set prev to be the value of the node variable
+- Set the node variable to be the value fo the next variable
+- 
