@@ -24,3 +24,33 @@ pscode
 - set the newTail's next to null
 - decrement the length
 - return the value removed
+
+shifting
+- removing a node from the beginning of the doubly linked list
+
+pscode 
+- if length 0 return undefine
+- store current head property in a variable (we'll call it old head)
+- if the length is one
+    - set the head to be null 
+    - set the tail to be null 
+
+- update the head to be the next of the old head
+- set the head's prev property to null 
+- set the old head's next to null 
+- decrement the length
+- return the old head
+
+unshifting
+- adding a node to the beginning of list
+
+pscode
+- create a new node with the value passed to the function 
+- if the length is 0
+    - set the head to be the new node
+    - set the tail to be the new node 
+- Otherwise 
+    - set the prev property on the head of the list to be the new node
+    - set the next property on the new node to be the head property
+    - update the head to be the new node 
+- increment length
