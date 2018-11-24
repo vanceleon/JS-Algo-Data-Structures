@@ -12,3 +12,15 @@ pscode
 - set the previous property on the newly created node to be the tail
 - increment the length
 - return the list
+
+pop
+- remove node at the end of the list
+
+pscode 
+- if there is no head, return undefined
+- store the current tail in a variable to return later
+- if the lengthh is 1, set the head and the tail to be null
+- update the tail to be the previous Node. 
+- set the newTail's next to null
+- decrement the length
+- return the value removed
