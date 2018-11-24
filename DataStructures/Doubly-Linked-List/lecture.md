@@ -66,3 +66,11 @@ pscode
 - if the index is greater than half the length of the list 
     - loop through the list starting from the tail and loop towards the middle
     - return the node once it is found
+
+set
+- replacing the value of a node 
+
+pscode
+- create var which is the result of the get method at the index passed to the function
+    - if the get method return a valid node, set the value of that node to be the value passed to the function
+    - return true
