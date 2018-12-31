@@ -34,3 +34,14 @@ How BSTS work
 - Every parent node has at most two children
 - Every node to the left of a parent node is always less than the parent 
 - Every node to the right of the parent node is always greater than the parent
+
+
+Inserting a Node
+- create new node
+- starting at root
+- check root, if not the root now becomes that node
+- if root, check the value, greater than to the right, less than to the left
+- if greater
+    - check nodes to the right, if nodes continue the steps
+- if less
+    - check nodes to the left, if nodes continue the steps

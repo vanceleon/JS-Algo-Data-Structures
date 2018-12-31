@@ -12,7 +12,17 @@ class BinarySearchTree {
         this.root = null;
 
     }
+    insert(value){
+        let newNode = new Node(value);
+        if (!this.root){
+            this.root = newNode;
+            return this;
+        }  
+    }
 }
+
+
+
 
 
 let tree = new BinarySearchTree();
@@ -21,3 +31,5 @@ tree.root.right = new Node(15);
 tree.root.left = new Node(7);
 tree.root.left = new Node(7);
 tree.root.left.right = new Node(9);
+
+console.log(tree);
