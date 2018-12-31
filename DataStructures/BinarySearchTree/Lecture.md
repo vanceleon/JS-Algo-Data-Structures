@@ -72,8 +72,26 @@ Tree Traversal
         - if there is a left property on the node dequeued - add it to the queue
 - Depth-First Search
     - InOrder
+        - create a variable to store the values of nodes visited 
+        - store the root of the BST in a variable called current
+        - write a helper function which accepts a node 
+            - if the node has left property, call helper function with the left property on the node
+            - push the value of thenode to the variable that stores the values
+            - if the node has a right property, call helper function with the right property on the node
+        - Invoke the helper function with the current variable
+
     - PostOrder
+        - create a variable to store the values of nodes visited 
+        - store the root of the BST in a variable called current
+        - write a helper function which accepts a node 
+            - if the node has left property, call helper function with the left property on the node
+            - if the node has a right property, call helper function with the right property on the node
+            - push the value of thenode to the variable that stores the values
+        - Invoke the helper function with the current variable
     - PreOrder
         - create a variable to store the values of nodes visited 
         - store the root of the BST in a variable called current
-        - write a helper function which accepts a node
+        - write a helper function which accepts a node 
+            - push the value of thenode to the variable that stores the values
+            - if the node has left property, call helper function with the left property on the node
+            - if the node has a right property, call helper function with the right property on the node
