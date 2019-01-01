@@ -10,3 +10,16 @@ Max Binary Heap
 
 Binary Heaps are used to implement Priority Queues
     which are very commonly used DS
+
+Inserting in a Binary Heap
+- add to the end of the heap 
+- then bubble up
+
+Pseudocode
+- Push the value into the values property on the heap
+- Bubble the value up to its correct spot
+    - create a variable called index which is the length of the values property - 1
+    - create a variable called parent index which is the floor of (index - 1) / 2
+    - Keep looping as long as the values element at the parent Index is less than the values element at the child index
+        - swap the value of the values element at the parent index with the value of the element property at the child index
+        - set the index to be the parent index, and start over!
