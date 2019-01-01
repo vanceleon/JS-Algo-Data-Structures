@@ -20,6 +20,39 @@ class MaxBinaryHeap {
             
         }
     }
+
+    extractMax() {
+        const max = this.values[0];
+        const end = this.values.pop();
+        this.values[0] = end;
+        // trickle down
+        return max;
+
+
+    }
+
+    sinkDown(index) {
+        let idx = 0;
+        const length = this.values.length;
+        const element = this.values[0];
+        while(true) {
+            let leftChildIndex = 2 * idx + 1;
+            let rigthChildIndex = 2 * idx + 2;
+            let leftChild, rightChild;
+            let swap = null;
+            
+            if(leftChildIndex < length) {
+                leftChild = this.values[leftChildIndex];
+                if(leftChild > element) {
+                    swap = leftChildIndex;
+                }
+            }
+            if(rigthChildIndex < length) {
+                rightChild = this.values[rigthChildIndex];
+            }
+            if (swap === null) break;
+        }
+    }
 }
 
 
