@@ -23,3 +23,8 @@ Pseudocode
     - Keep looping as long as the values element at the parent Index is less than the values element at the child index
         - swap the value of the values element at the parent index with the value of the element property at the child index
         - set the index to be the parent index, and start over!
+
+Removing from a Heap 
+- Remove the root
+- Replace with the most recently added 
+- adjust (sink down)
