@@ -101,6 +101,7 @@ class BinarySearchTree {
         traverse(current);
         return data;
     }
+    
     DFSInOrder(){
         let data = [];
         let current = this.root;
