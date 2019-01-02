@@ -31,3 +31,24 @@ intro to hash functions
 - needs to be fast 
 - Doesn't cluster outputs at specific indices, but distributes uniformly
 - Deterministic (same input yields the same output)
+
+
+#Dealing with Collisions 
+
+# Separate Chaining
+- each index in our array we store values using a more sophisticated data structure **(linked list or array)**.
+
+# Linear Probing 
+- in a collision, search through the array to find the next empty slot.
+- this allows us to store a single key-value at each index.
+
+#Set 
+ 1. Accepts a key and a value
+ 2. Hashes the key 
+ 3. stores the key-value pair in the hash table array via separate chaining
+
+#Get
+- Accepts a key
+- Hashes the key
+- Retrieves the key-value pair in the hash table
+ 
