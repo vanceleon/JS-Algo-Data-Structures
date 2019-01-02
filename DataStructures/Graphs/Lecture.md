@@ -110,8 +110,8 @@ Use cases
 
 
 Iterative Solution  
-Pseudocode 
- dfs-iterative (start):
+Pseudocode
+dfs-iterative (start):
     let S be a stack 
     S.push(start)
     while S is not empty
@@ -127,10 +127,24 @@ Pseudocode
 - create a list to store the end result, to be returned at the very end
 - Create an object to store visited vertices
 - add the starting vertex to the stack, and mark it visited
-- *while the stack has something in it*:
+- **while the stack has something in it**:
     - pop the next vertex from the stack
     - if that vertex hasn't been visited yet:
         - mark it as visited
         - add it to the result list
         - push all of its neighbors into the stack
 
+
+
+# Breadth First Traversal
+pseudocode
+- function should accept a starting vertex
+- create a queue (can use an array) and place the starting vertex in it
+- create an array to store the nodes visited
+- create an object to store nodes visited
+- mark the starting vertex as visited
+- loop as long as there is anything in the queue
+- remove the first vertex from the queue and push it into the array that stores nodes visited
+- loop over each vertex in the adjacency list for the vertex you are visting. 
+- if it is not inside the object that stores nodes, visited, mark it as visited and enqueue that vertex
+- once you have finished looping, return the array of visited nodes

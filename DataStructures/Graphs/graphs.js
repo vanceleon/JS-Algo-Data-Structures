@@ -66,6 +66,27 @@ class Graph {
         }
     }
 
+
+    breadthFirst(start) {
+        const queue = [start];
+        const result = [];
+        const visited = {};
+        visited[start] = true;
+
+        while (queue.length){
+            currentVertex = queue.shift();
+            result.push(currentVertex);
+            this.adjacentList[currentVertex].forEach(neighbor => {
+                if(!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    queue.push(neighbor);
+                }
+            })
+        }
+        return result;
+    }
+
+
 }
 
 let g = new Graph();
