@@ -13,7 +13,7 @@ class Graph {
 
     removeEdge(v1, v2) {
         this.adjacencyList[v1] = this.adjacencyList[v1].filter(v => v !== vertex2);
-        this.adjacencyList[v2] = this.adjacencyList[v2].filter(v => v !== vertex2);
+        this.adjacencyList[v2] = this.adjacencyList[v2].filter(v => v !== vertex1);
     }
     removeVertex(vertex){
         while (this.adjacencyList[vertex].length){
@@ -48,6 +48,7 @@ class Graph {
         const result = [];
         const visited = {};
         let currentVertex;
+        const adjacencyList = this.adjacencyList;
 
         visited[start] = true;
         while(stack.length) {
@@ -55,10 +56,10 @@ class Graph {
             currentVertex = stack.pop();
             result.push(currentVertex);
 
-            this.adjacencyList[currentVertex].forEach(neighbor => {
-                if(!visited[neighbor]){
+            adjacencyList[currentVertex].forEach(neighbor => {
+                if(!visited[neighbor]) {
                     visited[neighbor] = true;
-                    stack.push(neighbor)
+                    stack.push(neighbor);
                 }
             });
             return result;
@@ -67,8 +68,8 @@ class Graph {
 
 }
 
-
 let g = new Graph();
+
 g.addVertex("A")
 g.addVertex("B")
 g.addVertex("C")
@@ -76,12 +77,20 @@ g.addVertex("D")
 g.addVertex("E")
 g.addVertex("F")
 
-g.addEdge("A","B")
-g.addEdge("A","C")
+
+g.addEdge("A", "B")
+g.addEdge("A", "C")
 g.addEdge("B","D")
 g.addEdge("C","E")
 g.addEdge("D","E")
 g.addEdge("D","F")
 g.addEdge("E","F")
 
-g.depthFirstRecursive("A");
+
+//          A
+//        /   \
+//       B     C
+//       |     |
+//       D --- E
+//        \   /
+//          F
