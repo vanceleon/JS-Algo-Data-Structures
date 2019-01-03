@@ -52,3 +52,8 @@ intro to hash functions
 - Hashes the key
 - Retrieves the key-value pair in the hash table
  
+#Keys 
+- Loops through the hash table array and returns an array of **keys** in the table
+
+#Values
+- loops through the hash table array and returns an array of **values** in the table

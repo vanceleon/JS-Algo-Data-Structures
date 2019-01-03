@@ -14,11 +14,11 @@ function hash(key, arrayLen) {
 
 // Hash Table Class
 class HashTable {
-    constructor() {
+    constructor(size) {
         this.keyMap = new Array(size);
 
     }
-    _hasy(key){ //hash function for key value
+    _hash(key){ //hash function for key value
         let total = 0;
         let WEIRD_PRIME = 31;
         for(let i = 0; i < Math.min(key.length, 100); i++){
@@ -34,7 +34,28 @@ class HashTable {
         if (!this.keyMap[index]){
             this.keyMap[index] = [];
         }
-        this.keyMap[index].push([key,value]);
+        this.keyMap[index].push([key, value]);
     }
-    get
+    get(key) {
+        let index = this._hesh(key);
+        if(this.keyMap[index]) {
+            for(let i = 0; i < this.keyMap[index].length; i++) {
+                if(this.keyMap[index][i][0] === key) {
+                    return this.keyMap[index][i]
+                }
+            }
+        }
+        return undefined;
+    }
 }
+
+
+let ht = new HashTable(17);
+
+ht.set("maroon", "#80000");
+ht.set("yellow", "#FFFF00");
+ht.set("olive", "#808000");
+ht.set("salmon", "#FA8072");
+ht.set("lightcoral", "#F08080");
+ht.set("mediumvioletred", "#C71585");
+ht.set("plum", "#DDA0DD");
