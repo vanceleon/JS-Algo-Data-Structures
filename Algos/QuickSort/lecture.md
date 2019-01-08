@@ -27,3 +27,8 @@
     - if the pivot is *greater* than the current element, increment the pivot index variable and then swap the current element with the element at the pivot index.
 - swap the starting element (ex the pivot) with the pivot index 
 - return the pivot index
+
+
+# Quick Sort Pseudocode
+- Call pivot helper on the array
+- When the helper returns to you the updated pivot index, **recursively** call the pivot helper on the subarray to the left of that index, and the subarray to the right of that index.
