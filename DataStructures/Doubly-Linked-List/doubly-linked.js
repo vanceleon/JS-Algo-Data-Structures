@@ -91,29 +91,30 @@ class DoublyLinkedList {
     return current;
   }
   set(index, val) {
-      let foundNode = this.get(index);
-      if(foundNode != null){
-          foundNode.val = val;
-          return true;
-      }
-      return false;
+    let foundNode = this.get(index);
+    if (foundNode != null) {
+      foundNode.val = val;
+      return true;
+    }
+    return false;
   }
 
   insert(index, val) {
     if (index < 0 || index >= this.length) {
       return false;
-
-    }else if(index === 0){
-      this.unshift(val)
-    }else if(index === this.length) {
-      this.push(val)
-    }else{
-      this.get(index - 1);
-      
-
-      this.length++;
-      return true;
+    } else if (index === 0) {
+      return this.unshift(val);
+    } else if (index === this.length) {
+      return this.push(val);
     }
-
+    let newNode = new Node(val);
+    let beforeNode = this.get(index - 1);
+    let afterNode = beforeNode.next;
+    beforeNode.next = newNode;
+    newNode.prev = beforeNode;
+    newNode.next = afterNode;
+    afterNode.next = newNode;
+    this.length++;
+    return true;
   }
 }
