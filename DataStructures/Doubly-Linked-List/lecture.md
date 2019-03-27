@@ -74,3 +74,17 @@ pscode
 - create var which is the result of the get method at the index passed to the function
     - if the get method return a valid node, set the value of that node to be the value passed to the function
     - return true
+
+#insert
+
+- insert node into list
+
+Pseudo 
+- if the index is less than zero or greater than or equal to the length return false
+- if the index is 0, **unshift**
+- if the index is the same as the length, push
+- use the **get** method to access the index - 1
+- set the next and prev properties on thet correct nodes to link 
+everything together
+- increment the length
+- return true

@@ -98,4 +98,22 @@ class DoublyLinkedList {
       }
       return false;
   }
+
+  insert(index, val) {
+    if (index < 0 || index >= this.length) {
+      return false;
+
+    }else if(index === 0){
+      this.unshift(val)
+    }else if(index === this.length) {
+      this.push(val)
+    }else{
+      this.get(index - 1);
+      
+
+      this.length++;
+      return true;
+    }
+
+  }
 }
