@@ -71,11 +71,35 @@ class DoublyLinkedList {
     this.length++;
     return this;
   }
+
+
+    // get(index){
+    //     if(index < 0 || index >= this.length) return null;
+    //     var count, current;
+    //     if(index <= this.length/2){
+    //         count = 0;
+    //         current = this.head;
+    //         while(count !== index){
+    //             current = current.next;
+    //             count++;
+    //         }
+    //     } else {
+    //         count = this.length - 1;
+    //         current = this.tail;
+    //         while(count !== index){
+    //             current = current.prev;
+    //             count--;
+    //         }
+    //     }
+    //     return current;
+    // }
+
   get(index) {
     if (index < 0 || index >= this.length) return null;
+    let count, current;
     if (index <= this.length / 2) {
-      let count = 0;
-      let current = this.head;
+      count = 0;
+      current = this.head;
       while (count !== index) {
         current = current.next;
         count++;
@@ -117,4 +141,33 @@ class DoublyLinkedList {
     this.length++;
     return true;
   }
+
+  remove(index) {
+    if(index < 0 || index >= this.length) return undefined;
+    if(index === 0) return this.shift();
+    if(index === this.length - 1) return this.pop();
+    
+    // newNode.prev and newNode.next should be together
+    // .val is removed from the list
+    let removedNode = this.get(index);
+    let prevNode = this.get(index - 1);
+    let nextNode = removedNode.next;
+    prevNode.next = nextNode;
+    nextNode.prev = removedNode.prev;
+    removedNode.prev = null;
+    removedNode.next = null;
+    
+
+    this.length--;
+    return removedNode;
+
+  }
+
 }
+
+
+let list = new DoublyLinkedList()
+list.push("Harry")
+list.push("Potter")
+list.push("Ronald")
+list.push("Voldamort")
