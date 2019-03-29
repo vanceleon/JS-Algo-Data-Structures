@@ -11,3 +11,11 @@
 - increment the size of the stack by 1
 
 
+#Pop
+
+- if there are no nodes in the stack, return null
+- create a temporary variable to store the first property on the stack 
+- if there is only 1 node, set the first and last property to be null
+- if there is more than one node, set the first property to be the next property on the current first
+- decrement the size by 1 
+- return the value of the node removed
