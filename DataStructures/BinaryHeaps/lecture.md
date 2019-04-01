@@ -5,7 +5,7 @@ What is a Binary Heap?
 Max Binary Heap
 - Each parent has at most two child nodes
 - the value of each parent node is always greater than its child nodes
-- in a max binary heap the paretn is greater than the children, but there are no guarantees between sibling nodes. 
+- in a max binary heap the parent is greater than the children, but there are no guarantees between sibling nodes. 
 - A binary heap is as compact as possible. All the children of each node are as full as they can be and left children are filled out first.
 
 Binary Heaps are used to implement Priority Queues
